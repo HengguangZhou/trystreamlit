@@ -4,4 +4,4 @@ datasets==1.6.2
 transformers==4.5.1
 seqeval==1.2.2
 torch==1.7.1
-git+https://github.com/facebookresearch/detectron2.git
+git+https://github.com/facebookresearch/detectron2.git#egg=detectron2
