@@ -3,4 +3,4 @@ pandas
 datasets==1.6.2
 transformers==4.5.1
 seqeval==1.2.2
-transformers
+torch==1.7.1
