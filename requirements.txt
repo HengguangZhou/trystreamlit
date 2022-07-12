@@ -6,4 +6,4 @@ seqeval==1.2.2
 torch==1.7.1
 # Detectron
 --find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.7/index.html
-detectron2
+detectron2==0.5
