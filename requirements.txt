@@ -1,10 +1,2 @@
 streamlit
-pandas
-datasets==1.6.2
-transformers==4.5.1
-seqeval==1.2.2
-torch==1.7.1
 pip==22.1.2
-# Detectron
---find-links https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.7/index.html
-detectron2==0.5
