@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from datasets import ClassLabel, load_dataset, load_metric
 
 st.title('Uber pickups in NYC')
 
@@ -35,3 +36,9 @@ hour_to_filter = st.slider('hour', 0, 23, 17)  # min: 0h, max: 23h, default: 17h
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 st.map(filtered_data)
+
+datasets = load_dataset(
+    os.path.abspath(LiLTfinetune.data.datasets.xfun.__file__),
+    f"xfun.en",
+    keep_in_memory=True,
+)
