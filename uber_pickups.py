@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 from datasets import ClassLabel, load_dataset, load_metric
 
 st.title('Uber pickups in NYC')
