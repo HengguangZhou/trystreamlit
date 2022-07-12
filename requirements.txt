@@ -1,2 +1,5 @@
 streamlit
 pandas
+datasets==1.6.2
+transformers==4.5.1
+seqeval==1.2.2
