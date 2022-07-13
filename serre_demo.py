@@ -49,7 +49,8 @@ st.title('Uber pickups in NYC')
 # st.map(filtered_data)
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
 ser_model = AutoModelForTokenClassification.from_pretrained(
-        "layoutlmv2",
+        "dsvsddr/lilt_ser_en_base",
+        auth_token="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"
         # config=ser_config
         )
 
