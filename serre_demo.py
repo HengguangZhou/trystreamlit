@@ -8,6 +8,7 @@ from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
     AutoTokenizer,
+    AutoModelForSequenceClassification,
     HfArgumentParser,
     PreTrainedTokenizerFast,
     TrainingArguments,
@@ -48,18 +49,7 @@ st.title('Uber pickups in NYC')
 # st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 # st.map(filtered_data)
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-# config = AutoConfig.from_pretrained(
-#     "dsvsddr/lilt_ser_en_base",
-#     num_labels=7,
-#     finetuning_task='ner',
-#     use_auth_token="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",
-# )
-
-ser_model = AutoModelForTokenClassification.from_pretrained(
-        "dsvsddr/lilt_ser_en_base",
-        auth_token="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"
-        # config=ser_config
-        )
+model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased")
 
 # datasets = load_dataset(
 #     os.path.abspath(LiLTfinetune.data.datasets.xfun.__file__),
