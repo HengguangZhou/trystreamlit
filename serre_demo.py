@@ -52,12 +52,12 @@ config = AutoConfig.from_pretrained(
     "dsvsddr/lilt_ser_en_base",
     num_labels=7,
     finetuning_task='ner',
-    use_auth_token="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",
+    use_auth_token="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",
 )
 ser_model = AutoModelForTokenClassification.from_pretrained(
         "dsvsddr/lilt_ser_en_base",
         config=config,
-        auth_token="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"
+        auth_token="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"
         # config=ser_config
         )
 
