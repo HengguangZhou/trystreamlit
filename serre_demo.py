@@ -15,7 +15,7 @@ from transformers import (
     set_seed,
 )
 
-st.title('Uber pickups in NYC')
+st.title('Model')
 
 # DATE_COLUMN = 'date/time'
 # DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
@@ -50,7 +50,7 @@ st.title('Uber pickups in NYC')
 # st.map(filtered_data)
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
 model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased")
-
+st.write(model)
 # datasets = load_dataset(
 #     os.path.abspath(LiLTfinetune.data.datasets.xfun.__file__),
 #     f"xfun.en",
