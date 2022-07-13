@@ -4,4 +4,7 @@ datasets==1.6.2
 transformers==4.5.1
 seqeval==1.2.2
 torch==1.8.1
-git+https://github.com/facebookresearch/detectron2.git#egg=detectron2
+torchvision
+torchaudio
+detectron2==0.5 
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.8/index.html
