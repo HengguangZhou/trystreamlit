@@ -47,9 +47,9 @@ st.title('Uber pickups in NYC')
 # filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 # st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 # st.map(filtered_data)
-
+tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
 ser_model = AutoModelForTokenClassification.from_pretrained(
-        args.ser_model_name_or_path,
+        "layoutlmv2",
         # config=ser_config
         )
 
