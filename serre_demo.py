@@ -8,6 +8,7 @@ from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
     AutoTokenizer,
+    AutoModelForMaskedLM,
     HfArgumentParser,
     PreTrainedTokenizerFast,
     TrainingArguments,
@@ -52,12 +53,13 @@ config = AutoConfig.from_pretrained(
     "dsvsddr/lilt_ser_en_base",
     num_labels=7,
     finetuning_task='ner',
-    use_auth_token="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",
+    use_auth_token="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",
 )
-ser_model = AutoModelForTokenClassification.from_pretrained(
+
+ser_model = AutoModelForMaskedLM.from_pretrained(
         "dsvsddr/lilt_ser_en_base",
         config=config,
-        auth_token="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"
+        auth_token="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"
         # config=ser_config
         )
 
