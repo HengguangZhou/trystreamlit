@@ -8,7 +8,6 @@ from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
     AutoTokenizer,
-    AutoModelForMaskedLM,
     HfArgumentParser,
     PreTrainedTokenizerFast,
     TrainingArguments,
@@ -49,16 +48,16 @@ st.title('Uber pickups in NYC')
 # st.subheader(f'Map of all pickups at {hour_to_filter}:00')
 # st.map(filtered_data)
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-# config = AutoConfig.from_pretrained(
-#     "dsvsddr/lilt_ser_en_base",
-#     num_labels=7,
-#     finetuning_task='ner',
-#     use_auth_token="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",
-# )
+config = AutoConfig.from_pretrained(
+    "dsvsddr/lilt_ser_en_base",
+    num_labels=7,
+    finetuning_task='ner',
+    use_auth_token="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",
+)
 
-ser_model = AutoModelForMaskedLM.from_pretrained(
+ser_model = AutoModelForTokenClassification.from_pretrained(
         "dsvsddr/lilt_ser_en_base",
-        # config=config,
+        config=config,
         auth_token="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"
         # config=ser_config
         )
